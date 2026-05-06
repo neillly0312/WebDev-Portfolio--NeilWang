@@ -15,8 +15,17 @@
             text-decoration: none;
         }
         a:visited {
-            color: pink;
+            color: rgb(112, 108, 229);
             background-color: transparent;
             text-decoration: underline;
         }
+
+        div {
+            width: 100px;
+            height: 90px;
+            padding: 50px;
+            border: 5px solid black;
+            margin: 10px;
+            }
     </style>
+
