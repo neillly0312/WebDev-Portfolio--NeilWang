@@ -4,57 +4,97 @@
     <title>Neil Wang</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<body>
+    <header>Neil Wang</header>
 
-<body style=" background-color: rgba(0, 0, 255, 0.081);">
-    <h1> Neil's website<h1>
-        <img
-            src="images/n.png"
-            class="sticky-img"
-            style="width:100px; height:100px;"
-        />
-        <img
-            src="images/e.png"
-            class="sticky-img"
-            style="width:100px; height:100px;"
-        />
-        <img
-            src="images/i.png"
-            class="sticky-img"
-            style="width:100px; height:100px;"
-        />
-        <img
-            src="images/l.png"
-            class="sticky-img"
-            style="width:100px; height:100px;"
-        />
+    <div class="content">
+        <!-- 个人头像占位 -->
+        <img src="https://t14.baidu.com/it/u=1878694358,646015263&fm=224&app=112&f=JPEG?w=500&h=500" 
+             alt="this is me" 
+             class="profile-img">
+
+        <h1>😺💩Hello I'm Neil Wang💩😺</h1>
+        
+        <p>Welcome to my personal introduction page!</p>
+
+        <h2 class="section-title"> about me 🤩</h2>
+        <p>我是一名热爱技术的开发者，喜欢学习新知识，探索前端开发的无限可能。我相信代码可以改变世界，也希望能通过我的作品给大家带来快乐和便利。</p>
+
+        <h2 class="section-title">🎯 我的技能</h2>
+        <ul>
+            <li>💻 HTML / CSS / JavaScript</li>
+            <li>🎨 网页设计与响应式布局</li>
+            <li>🐍 Python 基础</li>
+            <li>📱 移动端适配开发</li>
+        </ul>
+
+        <h2 class="section-title">📖 兴趣爱好</h2>
+        <ul>
+            <li>🏀 </li>
+            <li>🎵 听音乐</li>
+            <li>📚 阅读技术书籍</li>
+            <li>✍️ 写诗（下面是我的作品👇）</li>
+        </ul>
+
+        <h2 class="section-title">📝 我的小诗</h2>
+        <div class="poem">
+            <p>❄️ Frozen wind cuts sharp against my <strong>face</strong>,</p>
+            <p>The trees stand bare and broken in the <u>snow</u>,</p>
+            <p>and not a <strong>single</strong> living creature can <mark>grow</mark>.</p>
+        </div>
+
+        <h2 class="section-title">🔗 my link</h2>
+        <div class="social-links">
+            <a href="https://www.douyin.com/jingxuan" target="_blank" title="抖音">🎵 抖音</a>
+            <a href="https://www.baidu.com" target="_blank">😽 Github</a>
+            <a href="#">📧 contact me if you want</a>
+        </div>
+
+        <div class="family-link">
+            <a href="https://www.baidu.com">我是陈宣知爸爸</a>
+        </div>
+
+        <p style="color:blue; margin-top: 20px;">✨ <strong>签名：</strong> 代码热爱者 | 创意无限 | 永不止步 ✨</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Neil Wang | all right reserved | update:2026</p>
+        <div>⭐ thank you for your visit⭐</div>
+    </footer>
 
     
-        <a href="https://www.douyin.com/jingxuan" target="_blank" title="幽默">
-        <img src="images/微信图片_20260408154208_109_251.jpg" alt="douyin pathway">
-        Visit one of my favorite websites!</a>
+    <img src="images/n.png" 
+         alt="Neil's logo" 
+         class="fixed-image-bottom-right"
+         onclick="greeting()"
+         >
 
-        <p style="color:blue;">Frozenm wind cuts sharp against my <strong>face</strong>,</p>
-        <p>The trees stad bare and broken in the <u>snow</u>,</p>
-        <div> <a href="https://www.baidu.com">我是陈宣知爸爸</a></div>
-        <p>and not a <strong>single</strong> living creature can <mark>grow</mark>.</p>
-      
-    
+ 
 
-        <img
-            src="https://t14.baidu.com/it/u=1878694358,646015263&fm=224&app=112&f=JPEG?w=500&h=500"
-            alt="milk frog"
-             style="width:400px; height:400px;"
-        />
+    <!-- 可选：欢迎按钮 -->
+    <div style="text-align: center; margin: 10px;">
+        <button onclick="alert('感谢关注 Neil Wang！')">🎉 点我了解Neil</button>
+        <button onclick="greeting()">donate</button>
+    </div>
 
-        <!--Example of a relative url as src value-->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMyRl-_iJHdM_-b48IzEIH5YXbvTeSSJeOVw&s" alt="relative url" />
+    <script>
+        function greeting() {
+            alert('Donate money to the author');
+        }
+        
+    </script>
 
-        <!--Example of an error retrieving an image.-->
-        <img src="error.jpg" alt="andrew." />
+    <div id="hello" style="display:none;">Hello world!</div>
 
-
+    <script>
+        var helloElem = document.getElementById('hello');
+        if (helloElem) {
+            helloElem.innerHTML = ':)';
+        }
+    </script>
 
 </body>
 </html>
