@@ -1,100 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Neil Wang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Neil Wang | 主页 · 开发者介绍</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-    <header>Neil Wang</header>
 
-    <div class="content">
-        <!-- 个人头像占位 -->
-        <img src="https://t14.baidu.com/it/u=1878694358,646015263&fm=224&app=112&f=JPEG?w=500&h=500" 
-             alt="this is me" 
-             class="profile-img">
+<nav>
+    <ul>
+        <li><a href="index.html" class="active">🏠 Home</a></li>
+        <li><a href="portfolio.html">📁 Portfolio</a></li>
+        <li><a href="design.html">💡 Design Thinking</a></li>
+        <li><a href="globalgoals.html">🌍 UN Global Goals</a></li>
+        <li><a href="accessibility.html">♿ Accessibility</a></li>
+    </ul>
+</nav>
 
-        <h1>😺💩Hello I'm Neil Wang💩😺</h1>
+<main>
+    <div class="page-header">🚀 Neil Wang · 前端开发者</div>
+    <div class="container clearfix">
+        <img src="https://t14.baidu.com/it/u=1878694358,646015263&fm=224&app=112&f=JPEG?w=500&h=500" alt="Neil Wang 个人照片" class="profile-img-small">
+        <h1>👋 你好，我是 Neil Wang</h1>
+        <p style="font-size:1.2rem; margin-top:0.5rem;">💻 创意开发者 | 响应式设计爱好者 | 用代码编织体验</p>
         
-        <p>Welcome to my personal introduction page!</p>
-
-        <h2 class="section-title"> about me 🤩</h2>
-        <p>我是一名热爱技术的开发者，喜欢学习新知识，探索前端开发的无限可能。我相信代码可以改变世界，也希望能通过我的作品给大家带来快乐和便利。</p>
-
-        <h2 class="section-title">🎯 我的技能</h2>
-        <ul>
-            <li>💻 HTML / CSS / JavaScript</li>
-            <li>🎨 网页设计与响应式布局</li>
-            <li>🐍 Python 基础</li>
-            <li>📱 移动端适配开发</li>
-        </ul>
-
-        <h2 class="section-title">📖 兴趣爱好</h2>
-        <ul>
-            <li>🏀 </li>
-            <li>🎵 听音乐</li>
-            <li>📚 阅读技术书籍</li>
-            <li>✍️ 写诗（下面是我的作品👇）</li>
-        </ul>
-
-        <h2 class="section-title">📝 我的小诗</h2>
-        <div class="poem">
-            <p>❄️ Frozen wind cuts sharp against my <strong>face</strong>,</p>
-            <p>The trees stand bare and broken in the <u>snow</u>,</p>
-            <p>and not a <strong>single</strong> living creature can <mark>grow</mark>.</p>
-        </div>
-
-        <h2 class="section-title">🔗 my link</h2>
-        <div class="social-links">
-            <a href="https://www.douyin.com/jingxuan" target="_blank" title="抖音">🎵 抖音</a>
-            <a href="https://www.baidu.com" target="_blank">😽 Github</a>
-            <a href="#">📧 contact me if you want</a>
-        </div>
-
-        <div class="family-link">
-            <a href="https://www.baidu.com">我是陈宣知爸爸</a>
-        </div>
-
-        <p style="color:blue; margin-top: 20px;">✨ <strong>签名：</strong> 代码热爱者 | 创意无限 | 永不止步 ✨</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Neil Wang | all right reserved | update:2026</p>
-        <div>⭐ thank you for your visit⭐</div>
-    </footer>
-
-    
-    <img src="images/n.png" 
-         alt="Neil's logo" 
-         class="fixed-image-bottom-right"
-         onclick="greeting()"
-         >
-
- 
-
-    <!-- 可选：欢迎按钮 -->
-    <div style="text-align: center; margin: 10px;">
-        <button onclick="alert('感谢关注 Neil Wang！')">🎉 点我了解Neil</button>
-        <button onclick="greeting()">donate</button>
-    </div>
-
-    <script>
-        function greeting() {
-            alert('Donate money to the author');
-        }
+        <div class="divider"></div>
         
-    </script>
+        <p>我是一名充满热情的前端开发者，相信技术应兼具美感与温度。从像素级还原到交互动效，我享受创造直观、愉悦的数字产品。目前专注于<strong>现代前端技术栈</strong>与<strong>包容性设计</strong>，希望每个人都能平等地享受网络世界。</p>
+        
+        <div class="divider-long"></div>
+        
+        <p>🎯 核心技能：HTML5/CSS3、JavaScript (ES6)、React基础、响应式布局、无障碍开发 (WCAG 2.1)。</p>
+        
+        <div class="divider"></div>
+        
+        <p>✨ 我的使命：通过优雅的代码和人性化设计，让科技更有同理心。</p>
+        
+        <div class="divider-long"></div>
+        
+        <!-- 时间显示区域 -->
+        <div class="time-display-area">
+            <h3 style="margin-bottom: 15px; color: #2c3e50;">🕐 当前时间</h3>
+            <div id="currentTime" class="current-time">--:--:--</div>
+            <button onclick="refreshTime()" style="margin-top: 15px; background: #3498db;">🔄 刷新时间</button>
+            <p style="margin-top: 15px; font-size: 12px; color: #7f8c8d;">⏰ 实时显示北京时间</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <p style="text-align:center; margin-top:20px;">✨ <strong>签名：</strong> 代码热爱者 | 创意无限 | 永不止步 ✨</p>
+    </div>
+</main>
 
-    <div id="hello" style="display:none;">Hello world!</div>
+<footer>
+    <p>© 2026 Neil Wang | 代码热爱者 · 创意无限 · 包容性设计</p>
+    <div>⭐ 感谢访问 | 用代码创造美好体验 ⭐</div>
+</footer>
 
-    <script>
-        var helloElem = document.getElementById('hello');
-        if (helloElem) {
-            helloElem.innerHTML = ':)';
+<script>
+    function updateTime() {
+        const timeElem = document.getElementById('currentTime');
+        if (timeElem) {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+            const weekday = weekdays[now.getDay()];
+            
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            const dateString = `${year}.${month}.${day} ${weekday}`;
+            
+            timeElem.innerHTML = `${timeString}<span style="font-size: 1rem; display: block; color: #7f8c8d;">${dateString}</span>`;
         }
-    </script>
+    }
 
+    function refreshTime() {
+        updateTime();
+        const btn = event.target;
+        btn.style.transform = 'scale(0.95)';
+        setTimeout(() => { btn.style.transform = ''; }, 150);
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
 </body>
 </html>
