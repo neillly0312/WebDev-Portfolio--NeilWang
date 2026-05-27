@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Neil Wang | 主页 · 开发者介绍</title>
+    <title>Neil Wang | Homepage</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-
+<script src="scripts/main.js"></script>
 <nav>
     <ul>
         <li><a href="index.html" class="active">🏠 Home</a></li>
@@ -20,11 +20,11 @@
 </nav>
 
 <main>
-    <div class="page-header">🚀 Neil Wang · 前端开发者</div>
+    <div class="page-header">🚀 Neil Wang </div>
     <div class="container clearfix">
         <img src="https://t14.baidu.com/it/u=1878694358,646015263&fm=224&app=112&f=JPEG?w=500&h=500" alt="Neil Wang 个人照片" class="profile-img-small">
-        <h1>👋 你好，我是 Neil Wang</h1>
-        <p style="font-size:1.2rem; margin-top:0.5rem;">💻 创意开发者 | 响应式设计爱好者 | 用代码编织体验</p>
+        <h1>👋 Hello, I'm Neil Wang</h1>
+        <p style="font-size:1.2rem; margin-top:0.5rem;">💻 Welcome to my website</p>
         
         <div class="divider"></div>
         
@@ -32,7 +32,7 @@
         
         <div class="divider-long"></div>
         
-        <p>🎯 核心技能：HTML5/CSS3、JavaScript (ES6)、React基础、响应式布局、无障碍开发 (WCAG 2.1)。</p>
+        <p>🎯 核心技能: HTML5/CSS3、JavaScript (ES6)、React基础、响应式布局、无障碍开发 (WCAG 2.1)。</p>
         
         <div class="divider"></div>
         
@@ -42,10 +42,10 @@
         
         <!-- 时间显示区域 -->
         <div class="time-display-area">
-            <h3 style="margin-bottom: 15px; color: #2c3e50;">🕐 当前时间</h3>
+            <h3 style="margin-bottom: 15px; color: #2c3e50;">🕐 current time</h3>
             <div id="currentTime" class="current-time">--:--:--</div>
-            <button onclick="refreshTime()" style="margin-top: 15px; background: #3498db;">🔄 刷新时间</button>
-            <p style="margin-top: 15px; font-size: 12px; color: #7f8c8d;">⏰ 实时显示北京时间</p>
+            <button onclick="refreshTime()" style="margin-top: 15px; background: #3498db;">🔄 refresh</button>
+            <p style="margin-top: 15px; font-size: 12px; color: #7f8c8d;">⏰ Current time</p>
         </div>
         
         <div class="divider"></div>
@@ -55,7 +55,7 @@
 </main>
 
 <footer>
-    <p>© 2026 Neil Wang | 代码热爱者 · 创意无限 · 包容性设计</p>
+    <p>© 2026 Neil Wang </p>
     <div>⭐ 感谢访问 | 用代码创造美好体验 ⭐</div>
 </footer>
 
@@ -70,7 +70,7 @@
             const hours = String(now.getHours()).padStart(2, '0');
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
-            const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+            const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
             const weekday = weekdays[now.getDay()];
             
             const timeString = `${hours}:${minutes}:${seconds}`;

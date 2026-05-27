@@ -13,7 +13,7 @@ body {
     line-height: 1.5;
 }
 
-/* ========= 五栏导航样式 - 加深颜色 ========= */
+
 nav {
     position: sticky;
     top: 0;
@@ -61,7 +61,6 @@ nav ul li a.active {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 响应式导航 */
 @media (max-width: 700px) {
     nav ul li a {
         padding: 0.4rem 1rem;
@@ -69,7 +68,7 @@ nav ul li a.active {
     }
 }
 
-/* 页面头部 */
+
 .page-header {
     background: linear-gradient(125deg, #7ec8e0, #5aa9c2);
     padding: 2rem 1rem;
@@ -291,4 +290,266 @@ footer p, footer div {
         font-size: 1.5rem;
     }
 }
+
+/* styles/main.css - 添加到文件末尾 */
+
+/* ===== 主题切换按钮样式 ===== */
+.theme-toggle {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .theme-toggle {
+        bottom: 80px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+/* ===== 暗色主题样式 ===== */
+/* styles/main.css - 替换暗色主题部分为以下内容 */
+
+/* ===== 暗色主题样式 (柔和不刺眼) ===== */
+body.dark-theme {
+    background: linear-gradient(145deg, #1e2a3a 0%, #1a2533 100%);
+    color: #e8e8e8;
+}
+
+/* 头部 */
+body.dark-theme .page-header {
+    background: linear-gradient(125deg, #2c4a6e, #1e3a5f);
+    color: #f0f0f0;
+}
+
+/* 主容器 - 半透明深色背景 */
+body.dark-theme .container {
+    background: rgba(35, 45, 55, 0.92);
+    color: #e0e0e0;
+}
+
+/* 卡片样式 */
+body.dark-theme .card {
+    background: #2a3a4a;
+    color: #e8e8e8;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-theme .card:hover {
+    background: #2f4052;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .card h3 {
+    color: #ffaa7a;
+}
+
+/* 章节标题 */
+body.dark-theme .section-title {
+    color: #ffaa7a;
+    border-left-color: #ff8c5a;
+}
+
+/* 设计思维步骤 */
+body.dark-theme .dt-step {
+    background: #2a3a48;
+    color: #ddd;
+    border-left-color: #ff8c5a;
+}
+
+body.dark-theme .dt-step strong {
+    color: #ffaa7a;
+}
+
+/* 全球目标高亮 */
+body.dark-theme .goal-highlight {
+    background: linear-gradient(120deg, #2a3a48, #253545);
+    color: #e0e0e0;
+}
+
+body.dark-theme .goal-highlight h2 {
+    color: #6abf8a !important;
+}
+
+/* 无障碍声明列表 */
+body.dark-theme .access-list {
+    background: #2a3a48;
+    color: #e0e0e0;
+}
+
+/* 时间显示区域 */
+body.dark-theme .time-display-area {
+    background: #2a3a48;
+    border-color: #ffaa7a;
+}
+
+body.dark-theme .time-display-area h3 {
+    color: #ffaa7a !important;
+}
+
+body.dark-theme .current-time {
+    color: #ffaa7a;
+}
+
+body.dark-theme .current-time span {
+    color: #aaa !important;
+}
+
+/* 按钮样式 */
+body.dark-theme button {
+    background: #ff7a4a;
+}
+
+body.dark-theme button:hover {
+    background: #ff9668;
+}
+
+body.dark-theme button:first-child {
+    background: #ff7a4a;
+}
+
+/* 页脚 */
+body.dark-theme footer {
+    background: #253545;
+    color: #ccc;
+}
+
+/* 链接样式 */
+body.dark-theme a {
+    color: #ffaa7a;
+}
+
+body.dark-theme a:hover {
+    color: #ffcc9a;
+}
+
+/* 诗歌区块 */
+body.dark-theme .poem {
+    background: #2a3a48;
+    color: #e0e0e0;
+    border-left-color: #ff8c5a;
+}
+
+/* 社交链接 */
+body.dark-theme .social-links a,
+body.dark-theme .family-link a {
+    background: #3a4a5a;
+    color: #e0e0e0;
+}
+
+body.dark-theme .social-links a:hover,
+body.dark-theme .family-link a:hover {
+    background: #ff7a4a;
+    color: white;
+}
+
+/* 消息区域 */
+body.dark-theme .message-area {
+    background: #2a3a48;
+    color: #e0e0e0;
+    border-left-color: #ffaa7a;
+}
+
+/* 模态窗 */
+body.dark-theme .modal-content {
+    background: #2a3a48;
+    color: #e0e0e0;
+}
+
+body.dark-theme .modal-content h2 {
+    color: #ffaa7a !important;
+}
+
+/* 分割线 */
+body.dark-theme .divider {
+    background: linear-gradient(90deg, #ff7a4a, #ffb87a, #ff7a4a);
+}
+
+body.dark-theme .divider-long {
+    background: linear-gradient(90deg, transparent, #ff7a4a, #ffb87a, #ff7a4a, transparent);
+}
+
+/* 列表样式 */
+body.dark-theme ul li,
+body.dark-theme ol li {
+    color: #ddd;
+}
+
+/* 输入框（如果有） */
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    background: #3a4a5a;
+    border: 1px solid #5a6a7a;
+    color: #e0e0e0;
+}
+
+body.dark-theme input:focus,
+body.dark-theme textarea:focus {
+    outline-color: #ffaa7a;
+}
+
+/* 导航栏在暗色模式下略微调整 */
+body.dark-theme nav {
+    background: rgba(30, 50, 70, 0.95);
+}
+
+body.dark-theme nav ul li a {
+    color: #e0e0e0;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-theme nav ul li a:hover {
+    background-color: #ff7a4a;
+    color: white;
+}
+
+body.dark-theme nav ul li a.active {
+    background-color: #ff7a4a;
+    color: white;
+}
+
+/* 过渡动画 - 平滑切换 */
+body,
+body.dark-theme .container,
+body.dark-theme .card,
+body.dark-theme button,
+body.dark-theme .social-links a,
+body.dark-theme .family-link a,
+body.dark-theme .dt-step,
+body.dark-theme .goal-highlight,
+body.dark-theme .access-list,
+body.dark-theme .time-display-area,
+body.dark-theme .poem,
+body.dark-theme .message-area {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 </style>
