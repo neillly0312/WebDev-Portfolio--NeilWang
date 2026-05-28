@@ -551,5 +551,314 @@ body.dark-theme .poem,
 body.dark-theme .message-area {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
+/* styles/main.css - 在文件末尾添加音乐播放器样式 */
 
+/* ===== 音乐播放器样式 ===== */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(30, 40, 50, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 60px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.music-player:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* 播放器按钮 */
+.player-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.player-btn:hover {
+    background: #e74c3c;
+    transform: scale(1.05);
+}
+
+.player-btn:active {
+    transform: scale(0.95);
+}
+
+/* 歌曲信息 */
+.song-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+.song-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.song-artist {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 进度条 */
+.progress-container {
+    width: 150px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #e74c3c, #ff8c69);
+    border-radius: 2px;
+    transition: width 0.1s linear;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 4px;
+}
+
+/* 音量控制 */
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.volume-slider {
+    width: 60px;
+    height: 3px;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e74c3c;
+    cursor: pointer;
+}
+
+/* 播放列表下拉 */
+.playlist-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    transition: all 0.2s;
+}
+
+.playlist-toggle:hover {
+    background: #e74c3c;
+}
+
+.playlist-dropdown {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    background: rgba(30, 40, 50, 0.98);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    width: 250px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 1001;
+    display: none;
+}
+
+.playlist-dropdown.show {
+    display: block;
+    animation: fadeInUp 0.2s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.playlist-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playlist-item:hover {
+    background: rgba(231, 76, 60, 0.3);
+}
+
+.playlist-item.active {
+    background: rgba(231, 76, 60, 0.5);
+    color: #ffaa7a;
+}
+
+.playlist-item .playlist-song {
+    font-size: 14px;
+}
+
+.playlist-item .playlist-artist {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* 暗色模式下的播放器适配 */
+body.dark-theme .music-player {
+    background: rgba(25, 35, 45, 0.98);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .music-player {
+        bottom: 15px;
+        left: 15px;
+        padding: 6px 12px;
+        gap: 8px;
+    }
+    
+    .player-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .song-info {
+        min-width: 80px;
+    }
+    
+    .song-title {
+        font-size: 12px;
+        max-width: 100px;
+    }
+    
+    .progress-container {
+        width: 100px;
+    }
+    
+    .volume-control {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .music-player .progress-container {
+        display: none;
+    }
+    .music-player .volume-control {
+        display: none;
+    }
+}
+
+/* styles/main.css - 在文件末尾添加音乐播放器样式 */
+
+/* ===== 音乐播放器样式 ===== */
+
+/* styles/main.css - 简化版音乐播放器（只有静音按钮） */
+
+/* ===== 静音按钮样式 ===== */
+.mute-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(70, 130, 200, 0.9);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.mute-btn:hover {
+    background: #e74c3c;
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.mute-btn:active {
+    transform: scale(0.95);
+}
+
+/* 暗色模式适配 */
+body.dark-theme .mute-btn {
+    background: rgba(50, 70, 90, 0.95);
+}
+
+body.dark-theme .mute-btn:hover {
+    background: #e74c3c;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .mute-btn {
+        bottom: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
 </style>

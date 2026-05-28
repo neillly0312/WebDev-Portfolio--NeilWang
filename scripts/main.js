@@ -71,3 +71,69 @@ document.addEventListener('DOMContentLoaded', function() {
     // 控制台输出，确认JS加载成功
     console.log('main.js success');
 });
+
+// scripts/main.js - 在文件末尾添加简化版音乐播放器
+
+// scripts/main.js - 简化版音乐播放器（静音按钮）
+
+// ===== 静音按钮音乐播放器 =====
+(function() {
+    // 音乐配置
+    const musicUrl = 'music/1.mp3';
+    let audio = null;
+    let isMuted = true;  // 默认静音
+    
+    // 创建音频元素
+    function createAudio() {
+        if (audio) return audio;
+        audio = new Audio();
+        audio.src = musicUrl;
+        audio.loop = true;
+        audio.volume = 0.5;
+        audio.muted = true;  // 默认静音
+        return audio;
+    }
+    
+    // 切换静音
+    function toggleMute() {
+        if (!audio) createAudio();
+        
+        isMuted = !isMuted;
+        audio.muted = isMuted;
+        
+        const muteBtn = document.getElementById('muteBtn');
+        if (muteBtn) {
+            muteBtn.innerHTML = isMuted ? '🔇' : '🔊';
+            muteBtn.style.background = isMuted ? '' : '#2ecc71';
+        }
+        
+        // 首次播放尝试
+        if (!isMuted && audio.paused) {
+            audio.play().catch(e => console.log('点击按钮开始播放'));
+        }
+    }
+    
+    // 创建按钮
+    function createMuteButton() {
+        if (document.getElementById('muteBtn')) return;
+        
+        const btn = document.createElement('button');
+        btn.id = 'muteBtn';
+        btn.className = 'mute-btn';
+        btn.innerHTML = '🔇';
+        btn.title = '静音/播放音乐';
+        btn.onclick = toggleMute;
+        document.body.appendChild(btn);
+        
+        createAudio();
+    }
+    
+    // 页面加载完成
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', createMuteButton);
+    } else {
+        createMuteButton();
+    }
+    
+    window.toggleMute = toggleMute;
+})();
