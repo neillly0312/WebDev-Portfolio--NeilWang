@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.id = 'muteBtn';
         btn.className = 'mute-btn';
         btn.innerHTML = '🔇';
-        btn.title = '静音/播放音乐';
+        btn.title = 'sound off/on';
         btn.onclick = toggleMute;
         document.body.appendChild(btn);
         
