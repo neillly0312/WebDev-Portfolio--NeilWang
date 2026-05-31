@@ -153,6 +153,13 @@ nav ul li a.active {
     margin: 1rem 0;
 }
 
+.goal-highlight1 {
+    background: linear-gradient(120deg, #2dec3a, #26dcf4);
+    padding: 1.5rem;
+    border-radius: 32px;
+    margin: 1rem 0;
+}
+
 /* 无障碍声明列表 */
 .access-list {
     background: #f0f7fc;
