@@ -484,6 +484,47 @@ body.dark-theme .message-area {
     border-left-color: #ffaa7a;
 }
 
+/* ===== 暗色主题 - 仅影响 Life on Land 页面 ===== */
+body.dark-theme .life-on-land-container li {
+    color: #e0e0e0;
+    background: transparent;
+    margin-bottom: 20px;
+}
+
+body.dark-theme .life-on-land-container li strong {
+    color: #ffaa7a;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+body.dark-theme .life-on-land-container li p {
+    color: #c0c0c0;
+    line-height: 1.5;
+}
+
+body.dark-theme .life-on-land-container img {
+    opacity: 0.9;
+    filter: brightness(0.9);
+    border: 1px solid rgba(255, 170, 122, 0.2);
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme .life-on-land-container img:hover {
+    opacity: 1;
+    border-color: #ffaa7a;
+}
+/* 暗色模式下的呼吁框 */
+body.dark-theme .appeal-box {
+    background: #2a3a48 !important;
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 170, 122, 0.3);
+}
+
+body.dark-theme .appeal-box strong {
+    color: #ffaa7a;
+}
 /* 模态窗 */
 body.dark-theme .modal-content {
     background: #2a3a48;
@@ -888,4 +929,6 @@ body.dark-theme .mute-btn:hover {
         font-size: 18px;
     }
 }
+
+
 </style>
