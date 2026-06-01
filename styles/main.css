@@ -770,6 +770,26 @@ body.dark-theme .music-player {
     border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* 暗色模式邮箱链接变色 */
+body.dark-theme a[href^="mailto"] {
+    color: #ffaa7a !important;
+}
+
+body.dark-theme a[href^="mailto"]:hover {
+    color: #ffcc9a !important;
+}
+
+/* 暗色模式下无障碍声明区块变色 */
+body.dark-theme .access-footer {
+    background: #2a3a48 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid rgba(255, 170, 122, 0.3);
+}
+
+body.dark-theme .access-footer:hover {
+    background: #2f4052 !important;
+}
+
 /* 移动端适配 */
 @media (max-width: 768px) {
     .music-player {
