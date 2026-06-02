@@ -62,7 +62,7 @@
 
 (function() {
     // music
-    const musicUrl = 'music/1.mp3';
+    const musicUrl = 'music/3.mp3';
     let audio = null;
     let isMuted = true;  // off
     
