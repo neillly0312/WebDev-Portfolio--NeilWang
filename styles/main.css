@@ -80,7 +80,7 @@ nav ul li a.active {
     letter-spacing: 1px;
 }
 
-/* 主容器卡片 */
+
 .container {
     max-width: 1100px;
     margin: 2rem auto;
@@ -99,7 +99,6 @@ nav ul li a.active {
     font-size: 1.8rem;
 }
 
-/* 作品集卡片网格 */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -136,7 +135,7 @@ nav ul li a.active {
     color: #e74c3c;
 }
 
-/* 设计思考步骤 */
+/* design */
 .dt-step {
     background: #fef9e6;
     border-radius: 24px;
@@ -145,7 +144,7 @@ nav ul li a.active {
     border-left: 6px solid #e67e22;
 }
 
-/* 全球目标高亮 */
+/* global */
 .goal-highlight {
     background: linear-gradient(120deg, #d4f1f9, #ffe6e6);
     padding: 1.5rem;
@@ -160,7 +159,7 @@ nav ul li a.active {
     margin: 1rem 0;
 }
 
-/* 无障碍声明列表 */
+/* accessibility */
 .access-list {
     background: #f0f7fc;
     border-radius: 28px;
@@ -203,7 +202,7 @@ footer {
     shape-outside: circle();
 }
 
-/* 焦点样式 */
+/* focus */
 :focus-visible {
     outline: 3px solid #e74c3c;
     outline-offset: 2px;
@@ -262,7 +261,7 @@ footer p, footer div {
     border-radius: 1px;
 }
 
-/* 时间显示区域 */
+/* time */
 .time-display-area {
     background: linear-gradient(135deg, #667eea15, #764ba215);
     border-radius: 20px;
@@ -280,7 +279,7 @@ footer p, footer div {
     letter-spacing: 2px;
 }
 
-/* 移动端适配 */
+
 @media (max-width: 600px) {
     .container {
         padding: 1.2rem;
@@ -298,9 +297,9 @@ footer p, footer div {
     }
 }
 
-/* styles/main.css - 添加到文件末尾 */
 
-/* ===== 主题切换按钮样式 ===== */
+
+/* switch */
 .theme-toggle {
     position: fixed;
     bottom: 100px;
@@ -330,7 +329,7 @@ footer p, footer div {
     transform: scale(0.95);
 }
 
-/* 移动端适配 */
+
 @media (max-width: 768px) {
     .theme-toggle {
         bottom: 80px;
@@ -341,28 +340,27 @@ footer p, footer div {
     }
 }
 
-/* ===== 暗色主题样式 ===== */
-/* styles/main.css - 替换暗色主题部分为以下内容 */
 
-/* ===== 暗色主题样式 (柔和不刺眼) ===== */
+
+/* dark */
 body.dark-theme {
     background: linear-gradient(145deg, #1e2a3a 0%, #1a2533 100%);
     color: #e8e8e8;
 }
 
-/* 头部 */
+/* header */
 body.dark-theme .page-header {
     background: linear-gradient(125deg, #2c4a6e, #1e3a5f);
     color: #f0f0f0;
 }
 
-/* 主容器 - 半透明深色背景 */
+/* body */
 body.dark-theme .container {
     background: rgba(35, 45, 55, 0.92);
     color: #e0e0e0;
 }
 
-/* 卡片样式 */
+/*  card */
 body.dark-theme .card {
     background: #2a3a4a;
     color: #e8e8e8;
@@ -378,13 +376,13 @@ body.dark-theme .card h3 {
     color: #ffaa7a;
 }
 
-/* 章节标题 */
+/* chapter */
 body.dark-theme .section-title {
     color: #ffaa7a;
     border-left-color: #ff8c5a;
 }
 
-/* 设计思维步骤 */
+/* design */
 body.dark-theme .dt-step {
     background: #2a3a48;
     color: #ddd;
@@ -395,7 +393,7 @@ body.dark-theme .dt-step strong {
     color: #ffaa7a;
 }
 
-/* 全球目标高亮 */
+/* global  */
 body.dark-theme .goal-highlight {
     background: linear-gradient(120deg, #2a3a48, #253545);
     color: #e0e0e0;
@@ -405,13 +403,13 @@ body.dark-theme .goal-highlight h2 {
     color: #6abf8a !important;
 }
 
-/* 无障碍声明列表 */
+/* accessibility */
 body.dark-theme .access-list {
     background: #2a3a48;
     color: #e0e0e0;
 }
 
-/* 时间显示区域 */
+/* time */
 body.dark-theme .time-display-area {
     background: #2a3a48;
     border-color: #ffaa7a;
@@ -429,7 +427,7 @@ body.dark-theme .current-time span {
     color: #aaa !important;
 }
 
-/* 按钮样式 */
+/* button */
 body.dark-theme button {
     background: #ff7a4a;
 }
@@ -442,13 +440,13 @@ body.dark-theme button:first-child {
     background: #ff7a4a;
 }
 
-/* 页脚 */
+/* footer */
 body.dark-theme footer {
     background: #253545;
     color: #ccc;
 }
 
-/* 链接样式 */
+/* link */
 body.dark-theme a {
     color: #ffaa7a;
 }
@@ -457,14 +455,14 @@ body.dark-theme a:hover {
     color: #ffcc9a;
 }
 
-/* 诗歌区块 */
+/* body */
 body.dark-theme .poem {
     background: #2a3a48;
     color: #e0e0e0;
     border-left-color: #ff8c5a;
 }
 
-/* 社交链接 */
+/* link */
 body.dark-theme .social-links a,
 body.dark-theme .family-link a {
     background: #3a4a5a;
@@ -477,14 +475,14 @@ body.dark-theme .family-link a:hover {
     color: white;
 }
 
-/* 消息区域 */
+/* body */
 body.dark-theme .message-area {
     background: #2a3a48;
     color: #e0e0e0;
     border-left-color: #ffaa7a;
 }
 
-/* ===== 暗色主题 - 仅影响 Life on Land 页面 ===== */
+/* life on land*/
 body.dark-theme .life-on-land-container li {
     color: #e0e0e0;
     background: transparent;
@@ -515,7 +513,7 @@ body.dark-theme .life-on-land-container img:hover {
     opacity: 1;
     border-color: #ffaa7a;
 }
-/* 暗色模式下的呼吁框 */
+
 body.dark-theme .appeal-box {
     background: #2a3a48 !important;
     color: #e0e0e0;
@@ -525,7 +523,7 @@ body.dark-theme .appeal-box {
 body.dark-theme .appeal-box strong {
     color: #ffaa7a;
 }
-/* 模态窗 */
+
 body.dark-theme .modal-content {
     background: #2a3a48;
     color: #e0e0e0;
@@ -535,7 +533,7 @@ body.dark-theme .modal-content h2 {
     color: #ffaa7a !important;
 }
 
-/* 分割线 */
+/* line */
 body.dark-theme .divider {
     background: linear-gradient(90deg, #ff7a4a, #ffb87a, #ff7a4a);
 }
@@ -544,13 +542,13 @@ body.dark-theme .divider-long {
     background: linear-gradient(90deg, transparent, #ff7a4a, #ffb87a, #ff7a4a, transparent);
 }
 
-/* 列表样式 */
+/* line */
 body.dark-theme ul li,
 body.dark-theme ol li {
     color: #ddd;
 }
 
-/* 输入框（如果有） */
+/* line */
 body.dark-theme input,
 body.dark-theme textarea,
 body.dark-theme select {
@@ -564,7 +562,7 @@ body.dark-theme textarea:focus {
     outline-color: #ffaa7a;
 }
 
-/* 导航栏在暗色模式下略微调整 */
+
 body.dark-theme nav {
     background: rgba(30, 50, 70, 0.95);
 }
@@ -584,7 +582,7 @@ body.dark-theme nav ul li a.active {
     color: white;
 }
 
-/* 过渡动画 - 平滑切换 */
+
 body,
 body.dark-theme .container,
 body.dark-theme .card,
@@ -599,9 +597,9 @@ body.dark-theme .poem,
 body.dark-theme .message-area {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-/* styles/main.css - 在文件末尾添加音乐播放器样式 */
 
-/* ===== 音乐播放器样式 ===== */
+
+
 .music-player {
     position: fixed;
     bottom: 20px;
@@ -624,7 +622,7 @@ body.dark-theme .message-area {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* 播放器按钮 */
+
 .player-btn {
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -649,7 +647,7 @@ body.dark-theme .message-area {
     transform: scale(0.95);
 }
 
-/* 歌曲信息 */
+
 .song-info {
     display: flex;
     flex-direction: column;
@@ -671,7 +669,7 @@ body.dark-theme .message-area {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* 进度条 */
+
 .progress-container {
     width: 150px;
     cursor: pointer;
@@ -702,7 +700,7 @@ body.dark-theme .message-area {
     margin-top: 4px;
 }
 
-/* 音量控制 */
+
 .volume-control {
     display: flex;
     align-items: center;
@@ -727,7 +725,7 @@ body.dark-theme .message-area {
     cursor: pointer;
 }
 
-/* 播放列表下拉 */
+
 .playlist-toggle {
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -805,13 +803,13 @@ body.dark-theme .message-area {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* 暗色模式下的播放器适配 */
+
 body.dark-theme .music-player {
     background: rgba(25, 35, 45, 0.98);
     border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* 暗色模式邮箱链接变色 */
+
 body.dark-theme a[href^="mailto"] {
     color: #ffaa7a !important;
 }
@@ -820,7 +818,7 @@ body.dark-theme a[href^="mailto"]:hover {
     color: #ffcc9a !important;
 }
 
-/* 暗色模式下无障碍声明区块变色 */
+
 body.dark-theme .access-footer {
     background: #2a3a48 !important;
     color: #e0e0e0 !important;
@@ -831,7 +829,7 @@ body.dark-theme .access-footer:hover {
     background: #2f4052 !important;
 }
 
-/* 移动端适配 */
+
 @media (max-width: 768px) {
     .music-player {
         bottom: 15px;
@@ -873,13 +871,7 @@ body.dark-theme .access-footer:hover {
     }
 }
 
-/* styles/main.css - 在文件末尾添加音乐播放器样式 */
 
-/* ===== 音乐播放器样式 ===== */
-
-/* styles/main.css - 简化版音乐播放器（只有静音按钮） */
-
-/* ===== 静音按钮样式 ===== */
 .mute-btn {
     position: fixed;
     bottom: 20px;
@@ -910,7 +902,7 @@ body.dark-theme .access-footer:hover {
     transform: scale(0.95);
 }
 
-/* 暗色模式适配 */
+
 body.dark-theme .mute-btn {
     background: rgba(50, 70, 90, 0.95);
 }
@@ -919,7 +911,7 @@ body.dark-theme .mute-btn:hover {
     background: #e74c3c;
 }
 
-/* 移动端适配 */
+
 @media (max-width: 600px) {
     .mute-btn {
         bottom: 15px;

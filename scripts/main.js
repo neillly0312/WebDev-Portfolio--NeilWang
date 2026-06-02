@@ -14,7 +14,7 @@
         document.body.appendChild(themeBtn);
     }
 
-    // 切换主题函数
+    // switch
     function toggleTheme() {
         const body = document.body;
         const isDark = body.classList.contains('dark-theme');
@@ -33,7 +33,7 @@
         }
     }
 
-    // 加载保存的主题
+    
     function loadTheme() {
         const savedTheme = localStorage.getItem('theme');
         const themeBtn = document.getElementById('themeToggle');
@@ -59,42 +59,25 @@
 })();
 
 
-// ===== 页面加载时的额外初始化 =====
-document.addEventListener('DOMContentLoaded', function() {
-    // 为作品集卡片添加点击提示（如果有模态窗）
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-        card.style.cursor = 'pointer';
-        card.setAttribute('title', 'click to detail');
-    });
-    
-    // 控制台输出，确认JS加载成功
-    console.log('main.js success');
-});
 
-// scripts/main.js - 在文件末尾添加简化版音乐播放器
-
-// scripts/main.js - 简化版音乐播放器（静音按钮）
-
-// ===== 静音按钮音乐播放器 =====
 (function() {
-    // 音乐配置
+    // music
     const musicUrl = 'music/1.mp3';
     let audio = null;
-    let isMuted = true;  // 默认静音
+    let isMuted = true;  // off
     
-    // 创建音频元素
+    // music
     function createAudio() {
         if (audio) return audio;
         audio = new Audio();
         audio.src = musicUrl;
         audio.loop = true;
         audio.volume = 0.5;
-        audio.muted = true;  // 默认静音
+        audio.muted = true;  // off
         return audio;
     }
     
-    // 切换静音
+    // off
     function toggleMute() {
         if (!audio) createAudio();
         
@@ -107,13 +90,13 @@ document.addEventListener('DOMContentLoaded', function() {
             muteBtn.style.background = isMuted ? '' : '#2ecc71';
         }
         
-        // 首次播放尝试
+        // on
         if (!isMuted && audio.paused) {
-            audio.play().catch(e => console.log('点击按钮开始播放'));
+            audio.play().catch(e => console.log('on'));
         }
     }
     
-    // 创建按钮
+    // button
     function createMuteButton() {
         if (document.getElementById('muteBtn')) return;
         
@@ -128,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         createAudio();
     }
     
-    // 页面加载完成
+    //finish
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', createMuteButton);
     } else {
